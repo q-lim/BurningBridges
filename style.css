@@ -1,10 +1,10 @@
 :root {
-  --felt: #ffffff;
+  --felt: #000000;
   --shadow: #0c1a13;
   --ink: #12251c;
-  --ivory: #b8e3ff;
-  --butter: #ffb0f2;
-  --marigold: #f2b632;
+  --colour1: #b2dbf7;
+  --colour2: #ffb0f2;
+  --buttoncolour: #fcd174;
   --flip-time: 0.6s;
 }
 
@@ -42,7 +42,7 @@ button {
   min-height: 3.5rem;
   font: 700 1.15rem system-ui, sans-serif;
   color: var(--ink);
-  background: var(--marigold);
+  background: var(--buttoncolour);
   border: 2px solid var(--ink);
   border-radius: 14px;
   box-shadow: 0 5px 0 var(--shadow);
@@ -51,7 +51,7 @@ button {
 }
 button:active:not(:disabled) { transform: translateY(4px); box-shadow: 0 1px 0 var(--shadow); }
 button:disabled { opacity: 0.5; cursor: default; }
-button:focus-visible { outline: 3px solid var(--ivory); outline-offset: 3px; }
+button:focus-visible { outline: 3px solid var(--colour1); outline-offset: 3px; }
 
 /* ---- Flip card ---- */
 .scene { perspective: 1200px; }
@@ -76,14 +76,14 @@ button:focus-visible { outline: 3px solid var(--ivory); outline-offset: 3px; }
   font-size: clamp(1.3rem, 5.5vw, 1.7rem);
   line-height: 1.4;
   color: var(--ink);
-  background: var(--ivory);
+  background: var(--colour1);
   border: 2px solid var(--ink);
   border-radius: 18px;
   box-shadow: 0 8px 0 var(--shadow);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
-.face.back { background: var(--butter); transform: rotateY(180deg); }
+.face.back { background: var(--colour2); transform: rotateY(180deg); }
 
 /* No question yet: show an empty card slot. */
 .face:empty {
